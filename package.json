@@ -4,7 +4,9 @@
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp copy-assets"
+    "postinstall": "gulp copy-assets",
+    "start": "gulp clean-dist && gulp dist",
+    "compile": "gulp compile"
   },
   "engines": {
     "node": "^10 || ^12 || >=14"
@@ -31,7 +33,7 @@
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "autoprefixer": "^10.2.5",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.2",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "font-awesome": "^4.7.0",

@@ -82,7 +82,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 				 * Add a class to the field's html element wrapper - woocommerce
 				 * input types (fields) are often wrapped within a <p></p> tag.
 				 */
-				$args['class'][] = 'form-group';
+				$args['class'][] = 'row';
 				// Add a class to the form input itself.
 				$args['input_class'] = array( 'form-control' );
 				// Add custom data attributes to the form input itself.

@@ -9,9 +9,7 @@
 }
 
 // Adding basic WordPress classes to pass the WordPress.org tests
-.sticky,
-.gallery-caption,
-.bypostauthor {
+.sticky, .gallery-caption, .bypostauthor {
 	font-size: inherit;
 }
 
@@ -21,8 +19,7 @@
 }
 
 // Adding some contrast background color to footer full widget
-#wrapper-footer-full,
-#wrapper-static-hero {
+#wrapper-footer-full, #wrapper-static-hero {
 	background-color: $gray-200;
 }
 
@@ -52,15 +49,14 @@
 }
 
 .aligncenter {
-	@extend .mx-auto,
-	.d-block;
+	@extend .mx-auto, .d-block;
 }
 
-.widget_categories,
-.widget_archive {
+.widget_categories, .widget_archive {
 	select {
 		@extend .form-control;
 	}
+
 }
 
 // Post design
@@ -68,11 +64,7 @@
 	padding-right: 10px;
 }
 
-img.wp-post-image,
-article img,
-figure,
-img,
-#secondary img {
+img.wp-post-image, article img, figure, img, #secondary img {
 	max-width: 100%;
 	height: auto;
 }
@@ -93,31 +85,29 @@ a.skip-link {
 // Dropdown translation
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
 	display: block;
-	width: 100%; // For `<button>`s
+	width: 100%;
+	// For `<button>`s
 	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
 	clear: both;
 	font-weight: $font-weight-normal;
 	color: $dropdown-link-color !important;
-	text-align: inherit; // For `<button>`s
-	white-space: nowrap; // prevent links from randomly breaking onto new lines
-	background: none; // For `<button>`s
-	border: 0; // For `<button>`s
+	text-align: inherit;
+	// For `<button>`s
+	white-space: nowrap;
+	// prevent links from randomly breaking onto new lines
+	background: none;
+	// For `<button>`s
+	border: 0;
 
-	@include hover-focus {
-		color: $dropdown-link-hover-color !important;
-		text-decoration: none;
-		background-color: $dropdown-link-hover-bg;
-	}
+	// For `<button>`s
 
-	&.active,
-	&:active {
+	&.active, &:active {
 		color: $dropdown-link-active-color !important;
 		text-decoration: none;
 		background-color: $dropdown-link-active-bg;
 	}
 
-	&.disabled,
-	&:disabled {
+	&.disabled, &:disabled {
 		color: $dropdown-link-disabled-color !important;
 		background-color: transparent;
 
@@ -125,23 +115,17 @@ a.skip-link {
 		@if $enable-gradients {
 			background-image: none;
 		}
+
 	}
+
 }
 
 .navbar-light .navbar-brand a {
 	color: $navbar-light-active-color;
-
-	@include hover-focus {
-		color: $navbar-light-active-color;
-	}
 }
 
 .navbar-dark .navbar-brand a {
 	color: $navbar-dark-active-color;
-
-	@include hover-focus {
-		color: $navbar-dark-active-color;
-	}
 }
 
 .navbar h1 {
@@ -152,6 +136,7 @@ a.skip-link {
 .gallery {
 	margin-bottom: 1.5em;
 }
+
 .gallery-item {
 	display: inline-block;
 	text-align: center;
@@ -159,11 +144,14 @@ a.skip-link {
 	width: 100%;
 
 	@for $i from 2 through 9 {
-		.gallery-columns-#{$i} & {
-			max-width: floor( percentage( 1 / $i ) * 100 ) / 100;
+		.gallery-columns-#{$i} {
+			max-width: floor(percentage(1 / $i) * 100) / 100;
 		}
+
 	}
+
 }
+
 .gallery-caption {
 	display: block;
 }
